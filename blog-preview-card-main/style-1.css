@@ -1,0 +1,139 @@
+
+:root {
+    --color-yellow: hsl(47, 88%, 63%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray-500: hsl(0, 0%, 42%);
+    --color-gray-950: hsl(0, 0%, 7%);
+}
+
+/* Main elements */
+@font-face {
+    font-family: 'main';
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'main-bolder';
+    src: url('./assets/fonts/static/Figtree-ExtraBold.ttf');
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-yellow);
+    font-family: 'main';
+}
+
+/* General elements */
+.fixed-contain {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-contain {
+    width: 17rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 2px solid var(--color-gray-950);
+    border-radius: 1rem;
+    box-shadow: 6px 6px 0px 0px var(--color-gray-950);
+    background-color: var(--color-white);
+    color: var(--color-gray-950);
+}
+.card-contain .backcover {
+    border: 0px solid;
+    border-radius: 0.8rem;
+}
+.all-stickers {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+}
+.all-stickers .sticker {
+    width: auto;
+    display: inline;
+    border: 0px solid;
+    border-radius: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    margin-right: 0.5rem;
+    font-family: 'main-bolder';
+    font-size: 0.7rem;
+    background-color: var(--color-yellow);
+}
+.card-contain .date {
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+.card-contain .title {
+    margin: 0;
+    font-family: 'main-bolder';
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-gray-950);
+    user-select: none;
+    cursor: pointer;
+    transition: color 0.1s linear;
+}
+.card-contain .title:hover {
+    color: var(--color-yellow);
+}
+.card-contain .description {
+    margin: 0;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--color-gray-500);
+}
+
+.post-owner-contain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+}
+.post-owner-contain .avatar {
+    width: 2rem;
+    height: 2rem;
+    border: 0px solid;
+    border-radius: 50%;
+    background-color: var(--color-gray-500);
+}
+.post-owner-contain .owner-name {
+    margin: 0;
+    margin-left: 0.5rem;
+    font-family: 'main-bolder';
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.attribution {
+    width: 80vw;
+    position: absolute;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: calc(100vh - 5rem);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Responsiveness */
+@media screen and (max-width: 535px) {
+    .card-contain .backcover {
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 4 / 3;
+    }
+}
