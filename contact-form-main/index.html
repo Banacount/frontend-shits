@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="./style-1.css">
+    <link rel="stylesheet" href="./reusables.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png"> 
+    <title>Frontend Mentor | Contact form</title>
+
+    <style>
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); } 
+    </style>
+</head>
+<body>
+
+<div class="fixed-contain">
+<div class="contact-form-contain">
+<h2 class="color-medium-gray no-margin mb-1">Contact Us</h2>
+
+<div class="name-info">
+    <div class="name-item" >
+        <div class="input-label">
+            <p class="sm-label">First Name</p>
+            <div class="required-h" title="Required field.">*</div>
+        </div>
+        <input type="text" name="first-name">
+    </div>
+
+    <div class="name-item" >
+        <div class="input-label">
+            <p class="sm-label">Last Name</p>
+            <div class="required-h" title="Required field.">*</div>
+        </div>
+        <input type="text" name="last-name">
+    </div>
+</div>
+
+<div class="name-info">
+    <div class="name-item" >
+        <div class="input-label">
+            <p class="sm-label">Email</p>
+            <div class="required-h" title="Required field.">*</div>
+        </div>
+        <input type="text" name="user-email">
+    </div>
+</div>
+
+<div class="name-info">
+    <div class="name-item" >
+        <div class="input-label">
+            <p class="sm-label">Query Type</p>
+            <div class="required-h" title="Required field.">*</div>
+        </div>
+        <div class="selector-contain">
+
+            <div class="radio-contain" id="generalEnquiryCon">
+                <input type="radio" id="generalEnquiry" name="general-enquiry">
+                <label for="generalEnquiry">General Enquiry</label>
+            </div>
+            <div class="radio-contain" id="supportRequestCon">
+                <input type="radio" id="supportRequest" name="support-request">
+                <label for="supportRequest">Support Request</label>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="name-info">
+    <div class="name-item" >
+        <div class="input-label">
+            <p class="sm-label">Message</p>
+            <div class="required-h" title="Required field.">*</div>
+        </div>
+        <div class="message-contain">
+            <p>Hello, I would like to know if you're able to build Shopify
+            e-commerce sites. We're starting a business and we're going
+            to use Shopify. But it would be great to work with an agency
+            who specialises in working with it.</p>
+        </div>
+    </div>
+</div>
+
+<div class="name-info mt-15">
+    <div class="name-item" >
+        <div class="input-label checkbox-contain" id="consentBoxContain">
+            <input type="radio" name="consent-checkbox" id="consentCheckbox">
+            <label for="consentCheckbox" class="sm-label">I consent to being contacted by the team</label>
+            <div class="required-h" title="Required field.">*</div>
+        </div>
+    </div>
+</div>
+
+<button class="submit-btn mt-15">Submit</button>
+
+</div>
+
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+        Coded by <a href="#">John Rushell</a>.
+    </div>
+
+</div>
+
+<!--
+Email Address
+Please enter a valid email address
+This field is required
+
+Query Type
+General Enquiry
+Support Request
+Please select a query type
+
+Message
+This field is required
+
+I consent to being contacted by the team
+To submit this form, please consent to being contacted
+
+Submit
+
+Message Sent!
+Thanks for completing the form. We'll be in touch soon!
+-->
+  
+
+<script src="./func-1.js"></script>
+</body>
+</html>

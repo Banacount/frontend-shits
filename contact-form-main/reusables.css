@@ -1,0 +1,26 @@
+
+.color-dark-green {
+    color: var(--green-600-medium);
+}
+.color-medium-gray {
+    color: var(--grey-900-darker);
+}
+.no-margin {
+    margin: 0;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mt-1 {
+    margin-top: 1rem;
+}
+.mt-15 {
+    margin-top: 1.5rem;
+}
+.mt-05 {
+    margin-top: 0.5rem;
+}
+.flex-row {
+    display: flex;
+    flex: row;
+}

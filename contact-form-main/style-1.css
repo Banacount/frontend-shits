@@ -1,0 +1,241 @@
+
+:root {
+    --white-var: hsl(0, 0%, 100%);
+    --red-var: hsl(0, 66%, 54%);
+    --grey-500-medium: hsl(186, 15%, 59%);
+    --grey-900-darker: hsl(187, 24%, 22%);
+    --green-200-lighter: hsl(148, 38%, 91%);
+    --green-600-medium: hsl(169, 82%, 27%);
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'karla';
+    src: url('./assets/fonts/Karla-VariableFont_wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* Root elements */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'karla';
+    background-color: var(--green-200-lighter);
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* General elements */
+.fixed-contain {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.contact-form-contain {
+    width: 40rem;
+    height: auto;
+    border: 0px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    background-color: var(--white-var);
+}
+.input-label {
+    display: flex;
+    flex-direction: row;
+}
+.sm-label {
+    width: auto;
+    display: inline-block;
+    font-size: 0.8rem;
+    color: var(--grey-900-darker);
+}
+.name-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+.name-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 0.5rem;
+}
+.name-item input {
+    width: 100%;
+    font-family: 'karla';
+    font-size: 0.9rem;
+    border: 1px solid var(--grey-900-darker);
+    border-radius: 0.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    color: var(--grey-900-darker);
+    outline: none;
+    cursor: pointer;
+    transition: 0.1s linear border-color;
+}
+.name-item input:focus {
+    border-color: var(--green-600-medium);
+}
+.name-item input:hover {
+    border-color: var(--green-600-medium);
+}
+.required-h {
+    width: 0.7rem;
+    height: 0.7rem;
+    display: inline-block;
+    user-select: none;
+    font-size: 0.6rem;
+    margin-top: 0.2rem;
+    margin-left: 0.7rem;
+    color: var(--green-600-medium);
+    cursor: pointer;
+}
+.selector-contain {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.radio-contain {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--grey-900-darker);
+    border-radius: 0.6rem;
+    box-sizing: border-box;
+    padding-right: 1.4rem;
+    padding-left: 1.4rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    user-select: none;
+    pointer-events: all;
+    cursor: pointer;
+}
+.radio-contain input {
+    display: none;
+}
+.radio-contain label {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    pointer-events: none;
+}
+.radio-contain label::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--green-600-medium);
+    border-radius: 50%;
+}
+.radio-contain label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    margin-top: 3px;
+    margin-left: 3px;
+    border: 0px solid var(--grey-900-darker);
+    border-radius: 1rem;
+    background-color: var(--green-600-medium);
+    transform: scale(0);
+    transition: 0.06s linear transform;
+}
+.radio-contain input[type="radio"]:checked + label::after {
+    transform: scale(1);
+}
+.radio-contain:has(input[type="radio"]:checked) {
+    background-color: var(--green-200-lighter);
+    border-color: var(--green-600-medium);
+}
+.name-item .message-contain {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--grey-900-darker);
+    border-radius: 0.4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    box-sizing: border-box;
+}
+.checkbox-contain {
+    width: 17rem;
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    pointer-events: all;
+    cursor: pointer;
+}
+.checkbox-contain input {
+    display: none;
+}
+.checkbox-contain label {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    pointer-events: none;
+}
+.checkbox-contain label::before {
+    content: "";
+    width: 13px;
+    height: 13px;
+    display: block;
+    margin-top: -1px;
+    border: 1px solid var(--green-600-medium);
+    border-radius: 3px;
+}
+.checkbox-contain input[type="radio"]:checked + label::before {
+    background-color: var(--green-200-lighter);
+    background-image: url('./assets/images/icon-checkbox-check.svg');
+    background-position: center;
+    background-size: cover;
+}
+.checkbox-contain .sm-label {
+    font-size: 0.7rem;
+}
+.submit-btn {
+    width: 100%;
+    font-family: 'karla';
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0px solid transparent;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    color: var(--white-var);
+    background-color: var(--green-600-medium);
+}
+
+
+.attribution {
+    width: 80vw;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
