@@ -17,7 +17,7 @@
 <body>
 
 <div class="fixed-contain">
-<div class="contact-form-contain">
+<form class="contact-form-contain">
 <h2 class="color-medium-gray no-margin mb-1">Contact Us</h2>
 
 <div class="name-info">
@@ -26,7 +26,7 @@
             <p class="sm-label">First Name</p>
             <div class="required-h" title="Required field.">*</div>
         </div>
-        <input type="text" name="first-name">
+        <input type="text" name="first-name" required>
     </div>
 
     <div class="name-item" >
@@ -34,7 +34,7 @@
             <p class="sm-label">Last Name</p>
             <div class="required-h" title="Required field.">*</div>
         </div>
-        <input type="text" name="last-name">
+        <input type="text" name="last-name" required>
     </div>
 </div>
 
@@ -44,7 +44,7 @@
             <p class="sm-label">Email</p>
             <div class="required-h" title="Required field.">*</div>
         </div>
-        <input type="text" name="user-email">
+        <input type="text" name="user-email" required>
     </div>
 </div>
 
@@ -57,11 +57,11 @@
         <div class="selector-contain">
 
             <div class="radio-contain" id="generalEnquiryCon">
-                <input type="radio" id="generalEnquiry" name="general-enquiry">
+                <input type="radio" id="generalEnquiry" name="general-enquiry" required>
                 <label for="generalEnquiry">General Enquiry</label>
             </div>
             <div class="radio-contain" id="supportRequestCon">
-                <input type="radio" id="supportRequest" name="support-request">
+                <input type="radio" id="supportRequest" name="support-request" required>
                 <label for="supportRequest">Support Request</label>
             </div>
 
@@ -75,28 +75,24 @@
             <p class="sm-label">Message</p>
             <div class="required-h" title="Required field.">*</div>
         </div>
-        <div class="message-contain">
-            <p>Hello, I would like to know if you're able to build Shopify
-            e-commerce sites. We're starting a business and we're going
-            to use Shopify. But it would be great to work with an agency
-            who specialises in working with it.</p>
-        </div>
+        <textarea class="message-contain" name="main-message" rows=3></textarea>
     </div>
 </div>
 
-<div class="name-info mt-15">
+<div class="name-info mt-1">
     <div class="name-item" >
         <div class="input-label checkbox-contain" id="consentBoxContain">
-            <input type="radio" name="consent-checkbox" id="consentCheckbox">
+            <input type="radio" name="consent-checkbox" id="consentCheckbox" required>
             <label for="consentCheckbox" class="sm-label">I consent to being contacted by the team</label>
             <div class="required-h" title="Required field.">*</div>
         </div>
+        <p class="some-error">To submit this form, please consent to being contacted</p>
     </div>
 </div>
 
 <button class="submit-btn mt-15">Submit</button>
 
-</div>
+</form>
 
     <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 

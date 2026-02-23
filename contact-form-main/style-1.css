@@ -79,7 +79,7 @@ p {
     width: 100%;
     font-family: 'karla';
     font-size: 0.9rem;
-    border: 1px solid var(--grey-900-darker);
+    border: 1px solid var(--grey-500-medium);
     border-radius: 0.5rem;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
@@ -97,6 +97,13 @@ p {
 .name-item input:hover {
     border-color: var(--green-600-medium);
 }
+.some-error {
+    display: none;
+}
+.name-item:has(input:user-invalid) .some-error  {
+    display: block;
+}
+
 .required-h {
     width: 0.7rem;
     height: 0.7rem;
@@ -117,7 +124,7 @@ p {
     width: 100%;
     display: flex;
     flex-direction: row;
-    border: 1px solid var(--grey-900-darker);
+    border: 1px solid var(--grey-500-medium);
     border-radius: 0.6rem;
     box-sizing: border-box;
     padding-right: 1.4rem;
@@ -171,13 +178,17 @@ p {
 .name-item .message-contain {
     display: flex;
     flex-direction: row;
-    border: 1px solid var(--grey-900-darker);
+    font-family: 'karla';
+    font-size: 1rem;
+    border: 1px solid var(--grey-500-medium);
     border-radius: 0.4rem;
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     box-sizing: border-box;
+    resize: none;
+    outline: none;
 }
 .checkbox-contain {
     width: 17rem;
@@ -216,6 +227,11 @@ p {
 .checkbox-contain .sm-label {
     font-size: 0.7rem;
 }
+.some-error {
+    font-size: 0.7rem;
+    color: red;
+}
+
 .submit-btn {
     width: 100%;
     font-family: 'karla';
@@ -227,6 +243,7 @@ p {
     margin-top: 1rem;
     color: var(--white-var);
     background-color: var(--green-600-medium);
+    cursor: pointer;
 }
 
 
