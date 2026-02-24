@@ -27,6 +27,7 @@
             <div class="required-h" title="Required field.">*</div>
         </div>
         <input type="text" name="first-name" required>
+        <p class="some-error">This field is required</p>
     </div>
 
     <div class="name-item" >
@@ -35,6 +36,7 @@
             <div class="required-h" title="Required field.">*</div>
         </div>
         <input type="text" name="last-name" required>
+        <p class="some-error">This field is required</p>
     </div>
 </div>
 
@@ -45,6 +47,7 @@
             <div class="required-h" title="Required field.">*</div>
         </div>
         <input type="text" name="user-email" required>
+        <p class="some-error">Please enter a valid email address</p>
     </div>
 </div>
 
@@ -57,15 +60,17 @@
         <div class="selector-contain">
 
             <div class="radio-contain" id="generalEnquiryCon">
-                <input type="radio" id="generalEnquiry" name="general-enquiry" required>
-                <label for="generalEnquiry">General Enquiry</label>
+                <input type="radio" id="generalEnquiry" name="query-type" value="general" required>
+                <span></span>
+                <label for="generalEnquiry" class="ml-1">General Enquiry</label>
             </div>
             <div class="radio-contain" id="supportRequestCon">
-                <input type="radio" id="supportRequest" name="support-request" required>
-                <label for="supportRequest">Support Request</label>
+                <input type="radio" id="supportRequest" name="query-type" value="support" required>
+                <span></span>
+                <label for="supportRequest" class="ml-1">Support Request</label>
             </div>
-
         </div>
+        <p class="some-error">Please select a query type</p>
     </div>
 </div>
 
@@ -75,7 +80,8 @@
             <p class="sm-label">Message</p>
             <div class="required-h" title="Required field.">*</div>
         </div>
-        <textarea class="message-contain" name="main-message" rows=3></textarea>
+        <textarea class="message-contain" name="main-message" rows=3 required></textarea>
+        <p class="some-error">This field is required</p>
     </div>
 </div>
 
