@@ -6,6 +6,7 @@
     --grey-900-darker: hsl(187, 24%, 22%);
     --green-200-lighter: hsl(148, 38%, 91%);
     --green-600-medium: hsl(169, 82%, 27%);
+    --green-dark: hsl(169, 82%, 13%);
 }
 
 /* Fonts */
@@ -40,6 +41,50 @@ p {
     align-items: center;
     justify-content: center;
     position: fixed;
+}
+
+.sent-notify {
+    z-index: 2;
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 1.6rem;
+    padding: 1.5rem;
+    border: 0px solid transparent;
+    border-radius: 0.8rem;
+    position: absolute;
+    background-color: var(--green-dark);
+    color: var(--white-var);
+    transform: translateY(calc(-100% - 2rem));
+    transition: 0.6s ease-in-out transform;
+}
+.sent-notify span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: bold;
+}
+.sent-notify span:before {
+    content: "";
+    display: block;
+    width: 1.3rem;
+    height: 1.3rem;
+    background: url('./assets/images/icon-success-check.svg');
+    background-position: center;
+    background-size: cover;
+}
+.sent-notify span:after {
+    content: "Message Sent!";
+    font-size: 1rem;
+}
+.sent-notify p {
+    width: 100%;
+    margin-top: 0.6rem;
+    font-family: 'karla';
+    font-size: 0.86rem;
 }
 
 .contact-form-contain {
@@ -162,15 +207,16 @@ p {
     display: block;
     width: 16px;
     height: 16px;
-    border: 1px solid var(--green-600-medium);
+    border: 1px solid var(--grey-500-medium);
     border-radius: 50%;
+    opacity: 0.7;
 }
 .radio-contain span::after {
     content: "";
     display: block;
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
     border: 0px solid var(--grey-900-darker);
     border-radius: 1rem;
     background-color: var(--green-600-medium);
@@ -180,6 +226,10 @@ p {
 .radio-contain input[type="radio"]:checked + span::after {
     transform: scale(1);
 }
+.radio-contain input[type="radio"]:checked + span::before {
+    border-color: var(--green-600-medium);
+}
+
 .radio-contain:has(input[type="radio"]:checked) {
     background-color: var(--green-200-lighter);
     border-color: var(--green-600-medium);
@@ -256,6 +306,10 @@ p {
     color: var(--white-var);
     background-color: var(--green-600-medium);
     cursor: pointer;
+    transition: background-color 0.2s linear;
+}
+.submit-btn:hover {
+    background-color: var(--green-dark);
 }
 
 
