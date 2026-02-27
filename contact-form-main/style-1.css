@@ -102,8 +102,10 @@ p {
 }
 .sm-label {
     width: auto;
-    display: inline-block;
+    display: block;
     font-size: 0.8rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
     color: var(--grey-900-darker);
 }
 .name-info {
